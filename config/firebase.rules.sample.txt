@@ -1,0 +1,15 @@
+// SAMPLE — you must adapt to your project
+{
+  "rules": {
+    ".read": true,
+    ".write": false,
+    "config": {
+      ".read": true,
+      ".write": false
+    },
+    "data": {
+      "demo": { ".read": true, ".write": false },
+      "live": { ".read": false, ".write": "auth != null" }
+    }
+  }
+}

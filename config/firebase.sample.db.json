@@ -1,0 +1,429 @@
+{
+  "config": {
+    "modules": {
+      "gpt-playground": {
+        "blurb": {
+          "short": "Freeform GPT testing."
+        }
+      },
+      "analytics-narrator": {
+        "blurb": {
+          "short": "Summarize KPIs from JSON.",
+          "long_md_url": "gs://public/blurbs/analytics-narrator.md",
+          "show_downloads": true,
+          "downloads": [
+            {
+              "label": "Example JSON",
+              "storage_url": "gs://public/analytics/seed.analytics.v1.json"
+            }
+          ]
+        }
+      },
+      "policy-faq-bot": {
+        "blurb": {
+          "short": "Ask questions against a long public doc (YouTube ToS).",
+          "long_md_url": "gs://public/blurbs/policy-faq-bot.md",
+          "show_downloads": true,
+          "downloads": [
+            {
+              "label": "YouTube ToS (PDF)",
+              "storage_url": "gs://public/policy-faq/youtube_tos.pdf"
+            }
+          ]
+        }
+      }
+    },
+    "tenants": {
+      "default": {
+        "brand": {
+          "name": "MezzAI \u2014 Demo"
+        },
+        "backendUrl": "https://mezzai-backend.onrender.com",
+        "modules": {
+          "gpt-playground": true,
+          "email-draft": true,
+          "lead-classifier": true,
+          "pie-dashboard": true,
+          "mini-chat": true,
+          "analytics-narrator": true,
+          "policy-faq-bot": true,
+          "message-insights": false,
+          "calendar-concierge": false,
+          "prospect-plan": false,
+          "crm-sync": false
+        },
+        "modules_overrides": {
+          "analytics-narrator": {
+            "blurb": {
+              "short": "Demo uses example JSON; you can upload your own."
+            }
+          }
+        }
+      }
+    }
+  },
+  "data": {
+    "demo": {
+      "pie-dashboard": {
+        "dataset_v1": {
+          "labels": [
+            "Member",
+            "Non-Member",
+            "Other"
+          ],
+          "values": [
+            42,
+            27,
+            9
+          ]
+        }
+      },
+      "analytics-narrator": {
+        "seed_v1": {
+          "meta": {
+            "date_range": "2025-09-01..2025-09-30",
+            "generated_at": "2025-10-01T12:00:00Z"
+          },
+          "kpis": {
+            "inbound_tickets": {
+              "value": 1240,
+              "delta_pct": 12
+            },
+            "first_response_time_min": {
+              "value": 18.4,
+              "delta_pct": -28
+            },
+            "csat": {
+              "value": 4.5,
+              "delta_pct": 0
+            },
+            "revenue_pipeline_usd": {
+              "value": 612000,
+              "delta_pct": 35
+            },
+            "meetings_booked": {
+              "value": 43,
+              "delta_pct": -10
+            }
+          },
+          "segments": {
+            "by_channel": [
+              {
+                "name": "email",
+                "tickets": 820
+              },
+              {
+                "name": "chat",
+                "tickets": 310
+              },
+              {
+                "name": "phone",
+                "tickets": 110
+              }
+            ],
+            "by_region": [
+              {
+                "name": "NA",
+                "tickets": 710
+              },
+              {
+                "name": "EMEA",
+                "tickets": 350
+              },
+              {
+                "name": "APAC",
+                "tickets": 180
+              }
+            ]
+          },
+          "time_series": {
+            "tickets_daily": [
+              {
+                "date": "2025-09-01",
+                "count": 56
+              },
+              {
+                "date": "2025-09-02",
+                "count": 57
+              },
+              {
+                "date": "2025-09-03",
+                "count": 58
+              },
+              {
+                "date": "2025-09-04",
+                "count": 59
+              },
+              {
+                "date": "2025-09-05",
+                "count": 60
+              },
+              {
+                "date": "2025-09-06",
+                "count": 61
+              },
+              {
+                "date": "2025-09-07",
+                "count": 62
+              },
+              {
+                "date": "2025-09-08",
+                "count": 63
+              },
+              {
+                "date": "2025-09-09",
+                "count": 64
+              },
+              {
+                "date": "2025-09-10",
+                "count": 65
+              },
+              {
+                "date": "2025-09-11",
+                "count": 66
+              },
+              {
+                "date": "2025-09-12",
+                "count": 67
+              },
+              {
+                "date": "2025-09-13",
+                "count": 68
+              },
+              {
+                "date": "2025-09-14",
+                "count": 69
+              },
+              {
+                "date": "2025-09-15",
+                "count": 70
+              },
+              {
+                "date": "2025-09-16",
+                "count": 71
+              },
+              {
+                "date": "2025-09-17",
+                "count": 72
+              },
+              {
+                "date": "2025-09-18",
+                "count": 73
+              },
+              {
+                "date": "2025-09-19",
+                "count": 74
+              },
+              {
+                "date": "2025-09-20",
+                "count": 25
+              },
+              {
+                "date": "2025-09-21",
+                "count": 26
+              },
+              {
+                "date": "2025-09-22",
+                "count": 27
+              },
+              {
+                "date": "2025-09-23",
+                "count": 28
+              },
+              {
+                "date": "2025-09-24",
+                "count": 29
+              },
+              {
+                "date": "2025-09-25",
+                "count": 30
+              },
+              {
+                "date": "2025-09-26",
+                "count": 31
+              },
+              {
+                "date": "2025-09-27",
+                "count": 32
+              },
+              {
+                "date": "2025-09-28",
+                "count": 33
+              },
+              {
+                "date": "2025-09-29",
+                "count": 34
+              },
+              {
+                "date": "2025-09-30",
+                "count": 35
+              }
+            ],
+            "csat_daily": [
+              {
+                "date": "2025-09-01",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-02",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-03",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-04",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-05",
+                "score": 4.2
+              },
+              {
+                "date": "2025-09-06",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-07",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-08",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-09",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-10",
+                "score": 4.2
+              },
+              {
+                "date": "2025-09-11",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-12",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-13",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-14",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-15",
+                "score": 4.2
+              },
+              {
+                "date": "2025-09-16",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-17",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-18",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-19",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-20",
+                "score": 4.2
+              },
+              {
+                "date": "2025-09-21",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-22",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-23",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-24",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-25",
+                "score": 4.2
+              },
+              {
+                "date": "2025-09-26",
+                "score": 4.25
+              },
+              {
+                "date": "2025-09-27",
+                "score": 4.3
+              },
+              {
+                "date": "2025-09-28",
+                "score": 4.35
+              },
+              {
+                "date": "2025-09-29",
+                "score": 4.4
+              },
+              {
+                "date": "2025-09-30",
+                "score": 4.2
+              }
+            ],
+            "pipeline_weekly": [
+              {
+                "week": "2025-W35",
+                "usd": 120000
+              },
+              {
+                "week": "2025-W36",
+                "usd": 150000
+              },
+              {
+                "week": "2025-W37",
+                "usd": 160000
+              },
+              {
+                "week": "2025-W38",
+                "usd": 182000
+              },
+              {
+                "week": "2025-W39",
+                "usd": 0
+              }
+            ]
+          },
+          "anomaly_candidates": [
+            {
+              "metric": "first_response_time_min",
+              "date": "2025-09-12",
+              "z": -2.3,
+              "note": "shift staffing pilot"
+            },
+            {
+              "metric": "tickets_daily",
+              "date": "2025-09-25",
+              "z": 2.1,
+              "note": "campaign launch"
+            }
+          ],
+          "notes": [
+            "Migrations completed 9/18",
+            "Support reroute went live 9/10"
+          ]
+        }
+      }
+    }
+  }
+}

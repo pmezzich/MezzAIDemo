@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MezzAI — Modular Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin:0; background:#0f172a; color:#e5e7eb; }
+    header { display:flex; align-items:center; gap:12px; padding:16px 20px; background:#0b1221; position:sticky; top:0; z-index:10; border-bottom:1px solid #1f2937; }
+    .dot { width:10px; height:10px; border-radius:50%; background:#ef4444; }
+    .dot.ok { background:#22c55e; }
+    .wrap { max-width:1100px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap:16px; }
+    .card { background:#111827; border:1px solid #1f2937; border-radius:14px; padding:16px; box-shadow:0 1px 10px rgba(0,0,0,.25); }
+    .subcard { background:#0b1221; border:1px solid #1f2937; border-radius:10px; padding:10px; margin-top:8px; }
+    .small { font-size:12px; opacity:.9; }
+    .muted { color:#9ca3af; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    textarea, input, select, button { width:100%; padding:10px; border-radius:10px; border:1px solid #374151; background:#0b1221; color:#e5e7eb; }
+    textarea { min-height:100px; }
+    button { cursor:pointer; }
+    .hidden { display:none; }
+    .chip { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid #334155; margin-left:6px; font-size:12px; }
+    .chip.active { background:#1f2937; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="dot" id="healthDot"></div>
+    <div>MezzAI — Modular Demo<span class="chip" id="envLabel">local</span></div>
+    <div class="muted small" style="margin-left:auto">Backend: <span id="beUrl" class="mono">none</span> · Tenant: <span id="tenantName" class="mono">default</span> · <span id="healthMsg" class="small"></span></div>
+  </header>
+  <div class="wrap" id="wrap"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

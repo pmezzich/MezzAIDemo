@@ -1,0 +1,17 @@
+{
+  "name": "default",
+  "backendUrl": "",
+  "modules": {
+    "gpt-playground": true,
+    "email-draft": true,
+    "lead-classifier": true,
+    "pie-dashboard": true,
+    "mini-chat": true,
+    "analytics-narrator": true,
+    "policy-faq-bot": true,
+    "message-insights": false,
+    "calendar-concierge": false,
+    "prospect-plan": false,
+    "crm-sync": false
+  }
+}

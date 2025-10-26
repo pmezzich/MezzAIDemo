@@ -1,0 +1,12 @@
+{
+  "labels": [
+    "Member",
+    "Non-Member",
+    "Other"
+  ],
+  "values": [
+    42,
+    27,
+    9
+  ]
+}
